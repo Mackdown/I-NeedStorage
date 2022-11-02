@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel= "stylesheet" href="css/man.css"
+</head>
+
+<body>
+	<h1>To Do List App</h1>
+	<form id="todoForm">
+		<input id="todoInput">
+		<button type="button" onclick="todoList()">Click Me</button>
+	</form>
+	<ol id="todoList">
+	</ol>
+
+	<script>
+		function todoList() {
+	var item = document.getElementById("todoInput").value
+	var text = document.createTextNode(item)
+	var newItem = document.createElement("li")
+	newItem.appendChild(text)
+	document.getElementById("todoList").appendChild(newItem)
+}
+
+	</script>
+
+</body>
+</html>
